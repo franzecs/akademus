@@ -8,7 +8,9 @@ public enum TipoEstagio {
 	CURRICULAR(4,"Curricular"),
 	NAOCURRICULAR(5,"Não Curricular"),
 	SELECAO11JEC(6, "Pré-seleção 11º JEC"),
-	MEDIACAO(7,"Mediação");
+	MEDIACAO(7,"Mediação"),
+	TRABALHISTA(8,"Trabalhista")
+	ACOMPANHAMENTOPROCESSUAL(9," Acompanhamento Processual");
 		
 	private int cod;
 	private String descricao;
