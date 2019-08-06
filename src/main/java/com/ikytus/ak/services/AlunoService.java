@@ -123,7 +123,7 @@ public class AlunoService implements AbstractService<Aluno> {
 		}
 		
 		if (getAlunoLogado().getSemestre().equals("10º")||getAlunoLogado().getSemestre().equals("9º")) {
-			for (TurmaEstagio t : turmaEstagioRepository.findBySemestre("2019.1")) { //seleciona as turmas de estágio do semestre
+			for (TurmaEstagio t : turmaEstagioRepository.findBySemestre("2019.2")) { //seleciona as turmas de estágio do semestre
 				if (t.getDisponivel().contains(getAlunoLogado().getSemestre())) { //verifica se a turma está disponível para o semestre do aluno
 					if(!turmasAluno.contains(t)) { // verifica se o aluno já se cadastrou na turma
 						if(!t.isLotada()) { // verifica se a turma de estágio está lotada
@@ -133,7 +133,7 @@ public class AlunoService implements AbstractService<Aluno> {
 				}
 			}
 		} else {
-			for (TurmaEstagio t : turmaEstagioRepository.findBySemestre("2019.1")) {//seleciona as turmas de estágio do semestre
+			for (TurmaEstagio t : turmaEstagioRepository.findBySemestre("2019.2")) {//seleciona as turmas de estágio do semestre
 				if (t.getDisponivel().contains(getAlunoLogado().getSemestre())) { //verifica se a turma está disponível para o semestre do aluno
 					if(!tipos.contains(t.getTipoEstagio().getDescricao())) { //verifica se o aluno já se cadastrou no tipo de estágio
 						if(!t.isLotada()) { // verifica se a turma de estágio está lotada
